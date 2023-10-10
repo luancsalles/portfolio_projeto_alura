@@ -1,0 +1,142 @@
+/* Este é um comentário de uma linha */
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+ 
+:root { /* Criando variáveis para as cores*/
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #272727;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* height: 100vh; */
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 15%; /* Valores na ordem superior, direiro, inferior, esquerdo */
+}
+
+.cabecalho__menu {
+    display: flex; /* Deve sempre ser colocado no elemento PAI*/
+    gap: 80px;  /* Espaçamento entre elementosa */
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none; /* tira o sublinhado do hiperlink*/
+}
+
+.titulo-destaque {
+    color: var(--cor-terciaria);
+}
+
+.apresentacao {
+    padding: 5% 15%; /* Primeiro valor vertical e segundo horizontal */
+    display: flex; /* Alinha os itens */
+    align-items: center; /* Centraliza os itens entre si */
+    justify-content: space-between; /* Espassamento entre as seções */
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Espassamento vertical entre os elementos */
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+}
+
+.apresentacao__links {
+    display: flex; /* Alinha os itens */
+    flex-direction: column;
+    justify-content: space-between; /* Espassamento entre as seções */
+    align-items: center; /* Centraliza os itens */
+    gap: 32px; /* Espaçamento entre os itens */
+}
+
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.apresentacao__links__link {
+    /*background-color: #22D4FD;*/
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria); /* Borda do botão */
+    width: 50%; /* Largura do botão em relação ao elemento pai */
+    text-align: center; /* Alinha o texto */
+    border-radius: 8px; /* Arredondamento das bordas */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    font-weight: 600;
+    padding: 21.5px 0; /* Espaçamento do conteúdo até a borda, primeiro valor vertical e segundo horizontal */
+    text-decoration: none; /* Tira o sublinhado do hiperlink */
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links__link:hover { /* Muda o link ao colocar o mouse em cima */
+    background-color: var(--cor-hover);
+    transform: scale(1.1); /* Zomm 110% ao colocar o mouse em cima */
+}
+
+.apresentacao__imagem {
+    width: 50%;
+}
+
+.rodape {
+    padding: 24px;
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) {  /*condição para nova disposição dos elementos, menor que 1200px */
+    .cabecalho {
+        padding: 10%;  /* Margem a cima */
+    }
+
+    .cabecalho__menu {
+        justify-content: center;  /* Centralizar */
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse; /* Disposição de coluna reversa*/
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto; /* Acompanha o tamanho da tela de forma automática */
+    }
+}
+
+/* */
